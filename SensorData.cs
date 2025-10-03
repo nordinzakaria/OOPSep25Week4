@@ -14,7 +14,6 @@ namespace OOPSep25Week4
         // array of SensorReading objects
         public SensorReading[] temperature = new SensorReading[10];
 
-
         /***** methods/operations/behaviors *****/
         public float calcAverage()
         {
@@ -28,7 +27,7 @@ namespace OOPSep25Week4
             return avg;
         }
 
-        float[] getHigherTemperature(float threshold)
+        public float[] getHigherTemperature(float threshold)
         {
 
             float[] results = new float[10];
@@ -43,16 +42,18 @@ namespace OOPSep25Week4
             return results;
         }
 
-        void read()
+        public void readData()
         {
-            cout << "Enter 10 temperature data";
+            Console.WriteLine("Enter 10 temperature data: ");
             for (int i = 0; i < 10; i++)
             {
-                cin >> temperature[i].val >> temperature[i].time;
+                string tempstr = Console.ReadLine();
+                temperature[i].val = float.Parse(tempstr);
+
+                string timestr = Console.ReadLine();
+                temperature[i].time = int.Parse(timestr);
             }
         }
-
-
 
     }
 }
