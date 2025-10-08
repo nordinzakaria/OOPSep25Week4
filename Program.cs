@@ -8,4 +8,9 @@ using OOPSep25Week4;
 Console.WriteLine("Hello, World!");
 
 SensorData sensorData = new SensorData();
-sensorData.readData();
+//sensorData.readData();
+
+SensorReading sensorReading = new SensorReading();
+
+SensorReading sensorReading2 = new SensorReading(30, 67);
+Console.WriteLine("Val is "+sensorReading2.GetVal());

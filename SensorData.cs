@@ -20,7 +20,7 @@ namespace OOPSep25Week4
             float avg = 0;
             for (int i = 0; i < 10; i++)
             {
-                avg += temperature[i].val;
+                avg += temperature[i].GetVal();
             }
             avg /= 10;
 
@@ -35,8 +35,8 @@ namespace OOPSep25Week4
 
             for (int i = 0; i < 10; i++)
             {
-                if (temperature[i].val > threshold)
-                    results[num++] = temperature[i].val;
+                if (temperature[i].GetTime() > threshold)
+                    results[num++] = temperature[i].GetVal();
             }
 
             return results;
@@ -48,10 +48,10 @@ namespace OOPSep25Week4
             for (int i = 0; i < 10; i++)
             {
                 string tempstr = Console.ReadLine();
-                temperature[i].val = float.Parse(tempstr);
+                temperature[i].SetVal(  float.Parse(tempstr)  );
 
                 string timestr = Console.ReadLine();
-                temperature[i].time = int.Parse(timestr);
+                temperature[i].SetTime( int.Parse(timestr) );
             }
         }
 
