@@ -48,10 +48,10 @@ namespace OOPSep25Week4
             for (int i = 0; i < 10; i++)
             {
                 string tempstr = Console.ReadLine();
-                temperature[i].SetVal(  float.Parse(tempstr)  );
-
                 string timestr = Console.ReadLine();
-                temperature[i].SetTime( int.Parse(timestr) );
+
+                temperature[i] =  new SensorReading(float.Parse(tempstr), 
+                                                    int.Parse(timestr));
             }
         }
 
