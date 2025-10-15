@@ -14,3 +14,7 @@ SensorReading sensorReading = new SensorReading();
 
 SensorReading sensorReading2 = new SensorReading(30, 67);
 Console.WriteLine("Val is "+sensorReading2.GetVal());
+
+// create another sensor data object, with storage for 100 readings
+SensorData sensorData2 = new SensorData(100);
+sensorData2.readData();

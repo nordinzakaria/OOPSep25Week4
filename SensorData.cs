@@ -12,7 +12,19 @@ namespace OOPSep25Week4
         /***** attributes/data/properties *****/
 
         // array of SensorReading objects
-        public SensorReading[] temperature = new SensorReading[10];
+        public SensorReading[] temperature;
+
+        public SensorData()
+        {  // create an array of size 10 for temperature
+            temperature = new SensorReading[10];
+        }
+
+        // constructor - 1 parameter: size of array
+        public SensorData(int sz)
+        {
+            temperature = new SensorReading[sz];
+        }
+
 
         /***** methods/operations/behaviors *****/
         public float calcAverage()
