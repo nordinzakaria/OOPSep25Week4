@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace OOPSep25Week4
 {
-    internal class SensorReading2D
+    internal class SensorReading2D : SensorReading
     {
-        public float Val { get; set; }
-        public int Time { get; set; }
-
-        
+        public Coordinate Coordinate { get; set; }
 
         public SensorReading2D()
         {
@@ -24,8 +21,6 @@ namespace OOPSep25Week4
             this.Time = time;
         }
 
-        public void Display() { }
-        public void Standardize() { }
 
     }
 }
